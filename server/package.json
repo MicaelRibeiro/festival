@@ -1,0 +1,42 @@
+{
+  "name": "festival",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "dependencies": {
+    "body-parser": "^1.20.2",
+    "cookie-parser": "^1.4.6",
+    "copyfiles": "^2.4.1",
+    "csrf": "^3.1.0",
+    "dotenv": "^16.4.5",
+    "express": "^4.19.2",
+    "express-handlebars": "^8.0.1",
+    "express-session": "^1.18.0",
+    "sequelize": "^6.37.3"
+  },
+  "devDependencies": {
+    "@types/connect-livereload": "^0.6.3",
+    "@types/cookie-parser": "^1.4.7",
+    "@types/dotenv": "^8.2.0",
+    "@types/express": "^4.17.21",
+    "@types/express-session": "^1.18.0",
+    "@types/livereload": "^0.9.5",
+    "@typescript-eslint/eslint-plugin": "^8.0.1",
+    "@typescript-eslint/parser": "^8.0.1",
+    "connect-livereload": "^0.6.1",
+    "eslint": "^9.9.0",
+    "eslint-config-prettier": "^9.1.0",
+    "eslint-plugin-prettier": "^5.2.1",
+    "livereload": "^0.9.3",
+    "nodemon": "^3.1.4",
+    "prettier": "^3.3.3",
+    "sqlite3": "^5.1.7",
+    "typescript": "^5.5.4"
+  },
+  "scripts": {
+    "start": "npx tsc && yarn copy-views && yarn copy-assets && node dist/server.js",
+    "copy-views": "mkdir -p ./dist/views && cp -r ./src/views/. ./dist/views/.",
+    "copy-assets": "mkdir -p ./dist/assets && cp -r ./src/assets/. ./dist/assets/.",
+    "watch": "nodemon --config nodemon.json"
+  }
+}

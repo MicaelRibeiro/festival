@@ -1,0 +1,32 @@
+    <div class="container_form">
+        <h1>Cadastro</h1>
+        <form class="form" action="/register-guest" method="post">
+            
+            <div class="form_grupo">
+                <label for="nome" class="form_label">Nome completo</label>
+                <input type="text" name="nome" class="form_input" id="nome" placeholder="Nome" required>
+            </div>
+            
+            <div class="form_grupo">
+                <label for="e-mail" class="form_label">Email</label>
+                <input type="email" name="email" class="form_input" id="email" placeholder="seuemail@email.com" required>
+            </div>
+
+            <div class="form_grupo">
+                <label for="nome" class="form_label">RG</label>
+                <input type="number" name="rg" class="form_input" id="nome" placeholder="rg" required>
+            </div>
+            
+            <div class="form_grupo">
+                <label for="text" class="form_label">Telefone</label>
+                <input type="tel" name="telefone" class="form_input" id="nome" placeholder="(99) 99999-9999" required>
+            </div>
+
+            <input type="hidden" name="_csrf" value="{{csrf_token}}" />
+      
+                <div class="submit">
+                        <button type="submit" class="submit_btn" >Cadastrar</button>
+                </div>
+                
+        </form>
+    </div><!--container_form-->

@@ -1,0 +1,34 @@
+<div class="container_form">        
+      
+        <h1>Lista de nomes</h1>
+        <button onclick="rodada()">Sortear</button>
+        <table class="tabela">
+            <tr class="titulo">
+                <th>Codigo</th>
+                <th>Nome</th>
+                <th>RG</th>
+                <th>Emeil</th>
+                <th>Telefone</th>
+            </tr>
+                {{#each guests}}
+            <tr>
+                <th>{{id}}</th>
+                <th>{{name}}</th>
+                <th>{{rg}}</th>
+                <th>{{email}}</th>
+                <th>{{phone}}</th>
+            </tr>
+            {{/each}}
+        </table>
+        <div class="submit">
+            <input type="hidden" name="acao" value="enviar">
+            <a href='/'>
+                <button  e="submit" name="Submit"  class="submit_btn" >Inicio</button>
+            </a>
+        </div>
+    </div>
+
+    <script src="../js/sorteio.js"></script>
+    <script>
+        const rodada = sorteio([{{#each guests}}{id: {{id}}, name: "{{name}}", email: "{{email}}", phone: "{{phone}}" }, {{/each}}])
+    </script>

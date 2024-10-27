@@ -1,0 +1,16 @@
+<div class="container_form">        
+        <img src="./img/icone-cadastro-falha-01.png" class="img-icon" alt="" />
+        <h1>Cadastrado realizado com Sucesso.</h1>
+         <p>Seguintes erros aconteceram</p>
+        <ul class="lista-erros">
+            {{#each errors}}
+            <li>{{this}}</li>
+            {{/each}}
+        </ul>
+        <div class="submit">
+            <input type="hidden" name="acao" value="enviar">
+            <a href='/'>
+                <button  e="submit" name="Submit"  class="submit_btn" >Inicio</button>
+            </a>
+        </div>
+    </div>
